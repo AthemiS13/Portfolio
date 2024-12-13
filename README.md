@@ -15,32 +15,53 @@
 ### Hardware with code:
 
 NeoGrip
+
 SmartPen
+
 SmartPor
+
 Blinds
+
 Roulette
+
 Retencka
+
 Moon
+
 SimRIG Shakers
+
 Robot
+
 SmartKnob
 
 
 ### Hardware
+
 Fuzz Pedal
+
 TimeGrapher
+
 NanoLeaf
+
 DC/AC Converter
+
 Preamp
+
 Liquid Cooler
+
 MP3 Player
+
 Pickups
+
 Handbrake
 
 ### 3D Design
 
 Peristalic Pump
+
 JV Watches
+
+Wheels
 Wheels
 
 ### Software
