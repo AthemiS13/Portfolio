@@ -2,10 +2,10 @@
 
 ## To do:
 1. Get projects together, finish STL files and textures
-2. Finish documentations
-3. Find a good inspirtion
+2. Finish documentation
+3. Find a good inspiration
 4. Create the structure
-5. Make a sketch in Figma
+5. Sketch in Figma
 6. Start building the website
 7. Buy a domain
 8. Host it
