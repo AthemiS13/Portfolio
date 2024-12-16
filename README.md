@@ -63,6 +63,12 @@ JV Watches
 
 Wheels
 
+### Resources:
+Icons: https://www.svgrepo.com/svg/446596/four-dots-square
+Fonts: https://fonts.google.com/specimen/Inter+Tight
+       https://fonts.google.com/specimen/Instrument+Sans
+
+
 ### Software
 
 ImmageTool
