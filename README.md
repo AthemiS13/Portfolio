@@ -1,5 +1,7 @@
 # Portfolio
-https://github.com/AthemiS13/Portfolio/blob/main/images/image.png
+
+[![Portfolio](https://github.com/AthemiS13/Portfolio/blob/main/images/image.png "Portfolio")](http://https://github.com/AthemiS13/Portfolio/blob/main/images/image.png "Portfolio")
+
 ## To do:
 1. Get projects together, finish STL files and textures
 2. Finish documentation
