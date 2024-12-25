@@ -211,7 +211,8 @@ body {
 }
 
 .card {
-    background: #111;
+    position: relative; /* Ensure the card is positioned relative to its container */
+    background: transparent;
     border-radius: 40px;
     display: flex;
     flex-direction: column;
@@ -225,13 +226,31 @@ body {
 .card:hover {
     transform: scale(1.05);
 }
+.card-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Ensure the video is behind other content */
+    pointer-events: none; /* Prevent interaction with the video */
+    filter: blur(4px) brightness(50%); /* Add blur and darken effect */
+    opacity: 0.7; /* Set initial opacity */
+    transition: filter 0.5s ease, opacity 0.5s ease; /* Add smooth transitions */
+}
 
+.card:hover .card-video {
+    filter: blur(0px) brightness(100%); /* Remove darken effect on hover */
+    opacity: 1; /* Ensure the video is fully visible on hover */
+}
 .card img {
     width: 100%;
     height: auto;
     max-width: 100%;
     display: block;
     object-fit: cover; /* Ensure the image covers the container */
+    z-index: 1; /* Ensure the image is above the video */
 }
 
 .work-description {
@@ -245,6 +264,7 @@ body {
     padding: 1rem 2rem 1rem 2rem;
     text-align: left;
     position: relative;
+    z-index: 1; /* Ensure the description is above the video */
 }
 
 .work-text h3 {
@@ -320,12 +340,10 @@ body {
 .more-work-btn:hover {
     color: black;
 }
-
-/* Footer */
 .footer {
     display: flex;
     justify-content: space-between; /* Space items out horizontally */
-    align-items: center; /* Center items vertically */
+    align-items: flex-end; /* Align items to the bottom */
     vertical-align: bottom;
     margin: 3rem 1.5rem 2rem 1.5rem;
     position: relative;
@@ -337,6 +355,7 @@ body {
     font-family: 'instrument sans', sans-serif;
     text-align: left;
     margin-left: 1rem; /* Adjust the left margin as needed */
+    margin-bottom: 0; /* Ensure the paragraph aligns with other elements */
 }
 
 .footer-links {
@@ -346,16 +365,17 @@ body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    bottom: 0; /* Align with the bottom of the footer */
 }
 
 .footer a {
     color: white;
     text-decoration: none;
     font-size: 1.5rem;
-    margin-top: auto;
     font-weight: 570;
     font-family: 'instrument sans', sans-serif;
     position: relative;
+    margin-bottom: 0; /* Ensure the links align with other elements */
 }
 
 .footer a:hover::after {
@@ -383,12 +403,14 @@ body {
 .footer .top {
     position: absolute;
     right: 1rem; /* Adjust the right margin as needed */
-    bottom: 1.5rem; /* Align with the footer padding */
+    bottom: 0; /* Align with the bottom of the footer */
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: 'Inter Tight', sans-serif;
     font-weight: 800;
     cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 0; /* Ensure the link aligns with other elements */
 }
 
 
