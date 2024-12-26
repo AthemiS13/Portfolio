@@ -15,7 +15,7 @@
     <!-- Header Section -->
     <header class="header">
         <div class="top-bar">
-            <button class="contact-btn">CONTACT NOW</button>
+            <button class="contact-btn" onclick="window.location.href='contact.html'">CONTACT NOW</button>
             <span class="logo">
                 <span class="logo-text">JCH</span><span class="logo-tm">™</span>
             </span>
@@ -26,7 +26,10 @@
             </div>
         </div>
         <div class="hero">
-            <p class="available">AVAILABLE</p>
+            <div class="availability-container">
+                <p class="status-available" id="status-available">AVAILABLE</p>
+                <p class="status-unavailable" id="status-unavailable">UNAVAILABLE</p>
+            </div>
             <h1 data-aos="fade-up">HARDWARE<br>DEVELOPER</h1>
             <div class="hero-text">
                 <p class="info">based in <span class="highlight">zlín</span>, Czech republic</p>
@@ -34,10 +37,10 @@
             </div>
         </div>
     </header>
-<!-- Full-width Divider Image -->
-<div class="divider">
-    <video src="images/vid.mp4" autoplay loop muted class="divider-video"></video>
-</div>
+    <!-- Full-width Divider Image -->
+    <div class="divider">
+        <video src="images/vid.mp4" autoplay loop muted class="divider-video"></video>
+    </div>
 
     <!-- Featured Work Section -->
     <section class="featured-work">
@@ -46,7 +49,6 @@
             <p class="comment">Engineering devices that bridge the gap<br> between the physical and digital worlds.</p>
         </div>
         <div class="work-cards">
-            
             <div class="card">
                 <video src="images/background.mp4" autoplay loop muted class="card-video" id="video-neogrip"></video>
                 <img src="images/basic.png" alt="NEOGRIP">
@@ -128,12 +130,11 @@
         </div>
     </section>
     <!-- Add this under the work tiles section -->
-<div class="more-work-container">
-    <button class="more-work-btn">MORE WORK</button>
-</div>
+    <div class="more-work-container">
+        <button class="more-work-btn" onclick="window.location.href='more-work.html'">MORE WORK</button>
+    </div>
 
     <!-- Footer -->
-<!-- Footer -->
     <footer class="footer">
         <p>BUILT AND DESIGNED<br>BY JAKUB CHMIELAR</p>
         <div class="footer-links">
@@ -146,10 +147,24 @@
     <!-- External JavaScript File -->
     <script src="script.js"></script>
 
-
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-            AOS.init();
-        </script>
+        AOS.init();
+    </script>
+
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menu-overlay">
+        <div class="menu-content">
+            <a href="index.html">Home</a>
+            <a href="more-work.html">More Work</a>
+            <a href="contact.html">Contact</a>
+            <a href="#" id="close-menu" class="close-menu-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+    </div>
 </body>
 </html>

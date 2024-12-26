@@ -63,20 +63,22 @@ body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    font-family: 'Instrument Sans', sans-serif;
+    font-family: 'Inter Tight', sans-serif;
     font-size: 2.2rem;
     font-weight: bold;
+    
 }
 
 .logo-text {
     position: relative;
-    padding: 4px;
+
 }
 
 .logo-tm {
     position: absolute;
+    font-family: 'Inter Tight', sans-serif;
     top: 0rem;
-    right: -1.6rem;
+
 }
 
 .menu-icon {
@@ -90,6 +92,46 @@ body {
 
 .menu-icon:hover {
     transform: rotate(45deg);
+}
+.menu-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Black background with opacity */
+    z-index: 1000; /* Ensure it is above other content */
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-content {
+    text-align: center;
+    font-family: 'Instrument Sans', sans-serif; /* Add Instrument Sans font */
+    font-weight: bold; /* Ensure the font is bold */
+}
+
+.menu-content a {
+    display: block;
+    color: white;
+    font-size: 2rem;
+    margin: 1rem 0;
+    text-decoration: none;
+}
+
+.menu-content a:hover {
+    text-decoration: underline;
+}
+
+.close-menu-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 3rem;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* Hero Section */
@@ -116,6 +158,7 @@ body {
     padding: 1.4%;
     opacity: 70%;
     position: relative;
+    font-family: 'Instrument Sans', sans-serif; /* Ensure the font is Instrument Sans */
 }
 
 .hero p.available::before {
@@ -123,13 +166,19 @@ body {
     display: inline-block;
     width: 10px;
     height: 10px;
-    background-color: #31EE33;
     border-radius: 50%;
     margin-right: 0.5rem;
     vertical-align: middle;
     transform: translateY(-1px);
 }
 
+.hero p.available.available::before {
+    background-color: #31EE33; /* Green color for available */
+}
+
+.hero p.available.unavailable::before {
+    background-color: #FF0000; /* Red color for unavailable */
+}
 .hero-text {
     display: flex;
     justify-content: space-between;
@@ -437,6 +486,59 @@ body {
 .underline-animation:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+
+.availability-container {
+    width: 100%;
+    height: 3rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.status-available, .status-unavailable {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    font-weight: 800;
+    opacity: 0;
+    font-family: 'Instrument Sans', sans-serif;
+    visibility: hidden; /* Use visibility instead of display */
+    display: flex;
+    align-items: center;
+}
+
+.status-available::before, .status-unavailable::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px; /* Add space between dot and text */
+}
+
+.status-available::before {
+    background-color: #31EE33;
+}
+
+.status-unavailable::before {
+    background-color: #FF0000;
+}
+
+.status-visible {
+    visibility: visible;
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.7;
+    }
 }
 
 /* Media Queries for Responsiveness */
