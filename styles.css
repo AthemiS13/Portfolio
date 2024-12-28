@@ -24,7 +24,7 @@ body {
 
 .contact-btn {
     background-color: transparent;
-    border: 1.5px solid white;
+    border: 2px solid white;
     border-radius: 50px;
     color: white;
     padding: 1rem 2rem;
@@ -61,11 +61,13 @@ body {
 
 .logo {
     position: absolute;
+    color: #fff;
     left: 50%;
     transform: translateX(-50%);
     font-family: 'Inter Tight', sans-serif;
     font-size: 2.2rem;
     font-weight: bold;
+    text-decoration: none;
     
 }
 
@@ -82,7 +84,7 @@ body {
 }
 
 .menu-icon {
-
+    position: relative;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -107,6 +109,9 @@ body {
 }
 
 .menu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     font-family: 'Instrument Sans', sans-serif; /* Add Instrument Sans font */
     font-weight: bold; /* Ensure the font is bold */
@@ -115,13 +120,17 @@ body {
 .menu-content a {
     display: block;
     color: white;
-    font-size: 2rem;
+    font-size: 4rem;
     margin: 1rem 0;
     text-decoration: none;
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: bold;
+    text-align: center;
 }
 
 .menu-content a:hover {
     text-decoration: underline;
+    color: #fff;
 }
 
 .close-menu-icon {
@@ -132,6 +141,15 @@ body {
     color: white;
     text-decoration: none;
     cursor: pointer;
+}
+
+#close-menu {
+    position: absolute;
+    top: 3.5%;
+    right: 1.5%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+
 }
 
 /* Hero Section */

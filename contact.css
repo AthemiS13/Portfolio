@@ -1,8 +1,11 @@
 body {
-    background-color: #000; 
-    color: #fff;
     margin: 0;
     font-family: 'Inter Tight', sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+
+}
+textarea {
+    resize: none;
 }
 
 /* Clock */
@@ -16,70 +19,88 @@ body {
     opacity: 0.7;
 }
 
-/* Header */
-.header {
-    position: relative;
-}
-
-.top-bar {
+/* Hero Section */
+.hero {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 2.3rem;
-    position: relative;
-    border-bottom: 2px solid #161616;
+    flex-direction: column;  /* Stack items (like h1) in a column */
+    align-items: center;     /* Horizontal center */
+    justify-content: center; /* Vertical center */
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
-.logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: 'Inter Tight', sans-serif;
-    font-size: 2.2rem;
+.hero h1 {
+    text-align: center;
+    font-size: 10rem;
     font-weight: bold;
+    margin: 0;
+    padding: 0;
 }
 
-.logo-text {
-    position: relative;
-}
-
-.logo-tm {
-    position: absolute;
-    top: 0rem;
-    font-family: 'Inter Tight', sans-serif;
-}
-
-.menu-icon {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s;
-}
-
-.menu-icon:hover {
-    transform: rotate(45deg);
-}
-
-.hero h1{
-    text-align: left;
-    font-size: 5rem;
-    font-weight: bold;
-    margin: 5rem 0  1rem 10rem;
+.hero .highlight .opacity-70 {
+    opacity: 0.7;
 }
 
 /* Contact Form Section */
 .contact-section {
-    margin: 4rem 0;
-    padding: 0 10rem;
-    text-align: left; /* Align the entire section to the left */
+    margin: 0;
+    padding: 2rem;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
-.contact-container {
-    margin: 0;
-    max-width: 500px; /* Adjust the max-width as needed */
+/* Left side with contact info */
+.contact-info {
+    flex: 1;
+    padding-right: 4rem;
 }
-.contact-container h2{
+
+.contact-info h2 {
+    font-size: 6vw;
+    margin-bottom: 6rem;
+}
+
+
+.info-line {
+    position: relative;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    padding-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+.info-line img {
+    width: 24px;
+    height: 24px;
+    filter: invert(1); /* Make black icons white */
+}
+
+.info-line p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+h3 {
+    font-family: 'Instrument Sans', sans-serif; /* Add Instrument Sans font */
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Right side with contact form */
+.contact-container {
+    width: 40%;
+    flex: 1;
+    margin: 0;
+}
+
+.contact-container h2 {
     font-size: 4rem;
 }
 
@@ -90,9 +111,12 @@ body {
 
 .contact-form {
     display: flex;
+    border: 2px solid #2E2E2E;
+    padding: 2rem;
+    border-radius: 20px;
     flex-direction: column;
     gap: 1.2rem;
-    margin-top: 2rem;
+
 }
 
 .contact-form label {
@@ -102,10 +126,10 @@ body {
 
 .contact-form input,
 .contact-form textarea {
+    background-color: #2E2E2E;
     color: #fff;
-    background-color: #161616;
-    border: 1.5px solid #fff;
-    border-radius: 5px;
+    border: 1px solid transparent; 
+    border-radius: 10px;
     padding: 0.8rem;
     font-family: 'Inter Tight', sans-serif;
     font-size: 1rem;
@@ -115,126 +139,25 @@ body {
 .contact-form input:focus,
 .contact-form textarea:focus {
     border-color: #7e7e7e;
+    border: 1px solid;
 }
 
-.contact-btn {
-    background-color: transparent;
-    border: 1.5px solid white;
-    border-radius: 50px;
+/* Add after existing contact form styles */
+
+.submit-btn {
+    background-color: #2E2E2E;
+    border: none;
+    border-radius: 10px;
     color: white;
     padding: 1rem 2rem;
     font-size: 1.2rem;
     font-family: 'Inter Tight', sans-serif;
     font-weight: 800;
     cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: color 0.3s;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.contact-btn::before,
-.contact-btn::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 0;
+.submit-btn:hover {
     background-color: white;
-    z-index: -1;
-    transition: height 0.3s;
-}
-
-.contact-btn:hover::before,
-.contact-btn:hover::after {
-    height: 100%;
-}
-
-.contact-btn:hover {
     color: black;
-}
-
-/* Overlay */
-.menu-overlay {
-    display: none; /* Hidden by default */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9); /* Black background with opacity */
-    z-index: 1000; /* Ensure it is above other content */
-    justify-content: center;
-    align-items: center;
-}
-
-.menu-content {
-    text-align: center;
-    font-family: 'Instrument Sans', sans-serif; /* Add Instrument Sans font */
-    font-weight: bold; /* Ensure the font is bold */
-}
-
-.menu-content a {
-    display: block;
-    color: white;
-    font-size: 2rem;
-    margin: 1rem 0;
-    text-decoration: none;
-}
-
-.menu-content a:hover {
-    text-decoration: underline;
-}
-
-.close-menu-icon {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-size: 3rem;
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* Footer */
-.footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: 2rem;
-    margin: 0 1rem;
-    border-top: 2px solid #161616;
-}
-
-.footer p {
-    margin: 0;
-}
-
-.footer-links {
-    display: flex;
-    gap: 1.5rem;
-}
-
-.footer-links a {
-    color: white;
-    text-decoration: none;
-    font-family: 'Inter Tight', sans-serif;
-    font-weight: 700;
-    transition: color 0.3s;
-}
-
-.footer-links a:hover {
-    text-decoration: underline;
-}
-
-.top {
-    color: white;
-    text-decoration: none;
-    font-family: 'Inter Tight', sans-serif;
-    font-weight: 700;
-    transition: color 0.3s;
-}
-
-.top:hover {
-    text-decoration: underline;
 }

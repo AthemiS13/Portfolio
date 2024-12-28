@@ -5,11 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact - Hardware Developer Portfolio</title>
   <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@100;200;300;400;500;600;700;800&family=Inter+Tight:wght@400;600;700&display=swap"
-    rel="stylesheet"
-  />
-  <!-- CSS File -->
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@100;200;300;400;500;600;700;800&family=Inter+Tight:wght@400;500;550;600;700&display=swap" rel="stylesheet"/>
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="contact.css" />
 </head>
 <body>
@@ -18,39 +16,56 @@
     <div class="top-bar">
       <!-- Local time in Czech Republic with seconds -->
       <span class="local-time" id="local-time"></span>
-      <span class="logo">
+      <a class="logo" href="index.html">
+      <span>
         <span class="logo-text">JCH</span><span class="logo-tm">™</span>
       </span>
+      </a>
       <div class="menu-icon" id="open-menu">
         <!-- Same menu icon from script.js -->
-        <svg width="30" height="30" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 30C12 31.1867 11.6481 32.3467 10.9888 33.3334C10.3295 34.3201 9.39246 35.0892 8.2961 35.5433C7.19975 35.9974 5.99335 36.1162 4.82946 35.8847C3.66557 35.6532 2.59648 35.0818 1.75736 34.2426C0.918247 33.4035 0.346802 32.3344 0.115291 31.1705C-0.11622 30.0067 0.00259972 28.8003 0.456726 27.7039C0.910851 26.6075 1.67989 25.6705 2.66658 25.0112C3.65328 24.3519 4.81331 24 6 24C7.5913 24 9.11743 24.6321 10.2426 25.7574C11.3679 26.8826 12 28.4087 12 30ZM6 0C4.81331 0 3.65328 0.351894 2.66658 1.01118C1.67989 1.67047 0.910851 2.60754 0.456726 3.7039C0.00259972 4.80026 -0.11622 6.00666 0.115291 7.17054C0.346802 8.33443 0.918247 9.40353 1.75736 10.2426C2.59648 11.0818 3.66557 11.6532 4.82946 11.8847C5.99335 12.1162 7.19975 11.9974 8.2961 11.5433C9.39246 11.0892 10.3295 10.3201 10.9888 9.33342C11.6481 8.34673 12 7.18669 12 6C12 4.4087 11.3679 2.88258 10.2426 1.75736C9.11743 0.632141 7.5913 0 6 0ZM36 30C36 31.1867 35.6481 32.3467 34.9888 33.3334C34.3295 34.3201 33.39246 35.0892 32.2961 35.5433C31.1997 35.9974 29.9933 36.1162 28.8295 35.8847C27.6656 35.6532 26.5965 35.0818 25.7574 34.2426C24.9182 33.4035 24.3468 32.3344 24.1153 31.1705C23.8838 30.0067 24.0026 28.8003 24.4567 27.7039C24.9108 26.6075 25.6799 25.6705 26.6666 25.0112C27.6533 24.3519 28.8133 24 30 24C31.5913 24 33.1174 24.6321 34.2426 25.7574C35.3679 26.8826 36 28.4087 36 30ZM30 0C28.8133 0 27.6533 0.351894 26.6666 1.01118C25.6799 1.67047 24.9108 2.60754 24.4567 3.7039C24.0026 4.80026 23.8838 6.00666 24.1153 7.17054C24.3468 8.33443 24.9182 9.40353 25.7574 10.2426C26.5965 11.0818 27.6656 11.6532 28.8295 11.8847C29.9933 12.1162 31.1997 11.9974 32.2961 11.5433C33.3925 11.0892 34.3295 10.3201 34.9888 9.33342C35.6481 8.34673 36 7.18669 36 6C36 4.4087 35.3679 2.88258 34.2426 1.75736C33.1174 0.632141 31.5913 0 30 0Z"
-            fill="white"
-          />
-        </svg>
+        <img src="icons/menu.svg" alt="Menu icon">
+
       </div>
     </div>
     <div class="hero">
-      <h1>CONTACT</h1>
+      <h1>HAVE A PROJECT?<br><span class="highlight">LET'S MAKE IT <span class="opacity-70">HAPPEN</span></span></h1>
     </div>
   </header>
 
   <!-- Contact Form Section -->
   <section class="contact-section">
+    <!-- Left side with contact info -->
+    <div class="contact-info">
+        <h2>GET IN TOUCH</h2>
+        <div class="info-line">
+            <img src="icons/mail.svg" alt="Email icon">
+            <p>info@jakubchmielar.com</p>
+        </div>
+        <div class="info-line">
+            <img src="icons/phone.svg" alt="Phone icon">
+            <p>+420 123 456 789</p>
+        </div>
+        <div class="info-line">
+            <img src="icons/location.svg" alt="Location icon">
+            <p>Zlín, Czech Republic</p>
+        </div>
+    </div>
+
+    <!-- Right side with contact form -->
     <div class="contact-container">
-      <h2>Get in Touch</h2>
-      <p>Feel free to reach out with any questions or collaborations.</p>
-      <form class="contact-form">
+
+      <form action="https://formsubmit.co/chmelar.projects@gmail.com" method="POST" class="contact-form" />
+        <h3>Send Message</h3>
         <label for="name">Name</label>
-        <input type="text" id="name" name="name" required/>
+        <input placeholder="Your Name" type="text" id="name" name="name" required/>
 
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" required/>
+        <input placeholder="example@email.com" type="email" id="email" name="email" required/>
 
         <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+        <textarea placeholder="Type Your Message" id="message" name="message" rows="5" required></textarea>
 
-        <button type="submit" class="contact-btn">Send</button>
+        <button type="submit" class="submit-btn">Send Message</button>
       </form>
     </div>
   </section>
@@ -73,20 +88,8 @@
       <a href="contact.html">Contact</a>
       <a href="#" id="close-menu" class="close-menu-icon">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M18 6L6 18"
-            stroke="white"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M6 6L18 18"
-            stroke="white"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
+          <path d="M18 6L6 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </a>
     </div>
@@ -103,6 +106,8 @@
     }
     setInterval(updateCzechTime, 1000);
     updateCzechTime();
+
+
   </script>
 </body>
 </html>

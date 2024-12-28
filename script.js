@@ -48,4 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Update availability status on page load
     updateAvailabilityStatus();
+
+
 });
