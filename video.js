@@ -2,29 +2,45 @@ document.addEventListener('DOMContentLoaded', () => {
     const videos = document.querySelectorAll('.card-video');
 
     videos.forEach(video => {
-        // Set a random frame for each video
-        video.addEventListener('loadedmetadata', () => {
-            const duration = video.duration || 10; // Default to 10 seconds if duration is not available
+        // Add error handling
+        video.addEventListener('error', (e) => {
+            console.warn(`Video load error: ${e.message}`);
+            // Optionally set a fallback background
+            video.parentElement.style.backgroundColor = '#161616';
+        });
+
+        // Check if video exists before trying to play
+        if (video.readyState > 0) {
+            handleVideo(video);
+        } else {
+            video.addEventListener('loadedmetadata', () => handleVideo(video));
+        }
+    });
+
+    function handleVideo(video) {
+        try {
+            const duration = video.duration || 10;
             const randomTime = Math.random() * duration;
             video.currentTime = randomTime;
-
-            // Pause the video at the random frame
             video.pause();
-        });
+            video.playbackRate = 1;
 
-        // Set the playback rate to 0.6
-        video.playbackRate = 1;
+            // Add loading state
+            video.parentElement.addEventListener('mouseenter', async () => {
+                try {
+                    video.style.opacity = '1';
+                    await video.play();
+                } catch (err) {
+                    console.warn('Video play failed:', err);
+                }
+            });
 
-        // Play the video from the current frame on hover
-        video.parentElement.addEventListener('mouseenter', () => {
-            video.style.opacity = '1'; // Ensure the video is fully visible
-            video.play();
-        });
-
-        // Pause the video when the mouse leaves the card
-        video.parentElement.addEventListener('mouseleave', () => {
-            video.style.opacity = '0.7'; // Fade out the video but keep it visible
-            video.pause();
-        });
-    });
+            video.parentElement.addEventListener('mouseleave', () => {
+                video.style.opacity = '0.7';
+                video.pause();
+            });
+        } catch (err) {
+            console.warn('Video handling error:', err);
+        }
+    }
 });
