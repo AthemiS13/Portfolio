@@ -1,10 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("idk.js is connected!");
+    console.log("script.js is connected!");
 
-    // Example functionality for the contact button
-    document.querySelector('.contact-btn').addEventListener('click', () => {
-        window.location.href = 'contact.html';
-    });
+    // Only add contact button listener if element exists
+    const contactBtn = document.querySelector('.contact-btn');
+    if (contactBtn) {
+        contactBtn.addEventListener('click', () => {
+            window.location.href = 'contact.html';
+        });
+    }
 
     // Smooth scrolling for 'Go Back to Top'
     document.querySelectorAll('a[href="#top"]').forEach(link => {
@@ -15,14 +18,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Menu button functionality
-    document.querySelector('.menu-icon').addEventListener('click', () => {
-        document.getElementById('menu-overlay').style.display = 'flex';
-    });
+    const menuIcon = document.querySelector('.menu-icon');
+    const menuOverlay = document.getElementById('menu-overlay');
+    const closeMenu = document.getElementById('close-menu');
 
-    document.getElementById('close-menu').addEventListener('click', (e) => {
-        e.preventDefault();
-        document.getElementById('menu-overlay').style.display = 'none';
-    });
+    if (menuIcon && menuOverlay && closeMenu) {
+        menuIcon.addEventListener('click', () => {
+            console.log('Menu icon clicked');
+            menuOverlay.style.display = 'flex';
+        });
+
+        closeMenu.addEventListener('click', (e) => {
+            e.preventDefault();
+            menuOverlay.style.display = 'none';
+        });
+    }
 
     // Availability status functionality
     function updateAvailabilityStatus() {
@@ -48,6 +58,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Update availability status on page load
     updateAvailabilityStatus();
-
-
 });

@@ -22,10 +22,8 @@
         <span class="logo-text">JCH</span><span class="logo-tm">™</span>
       </span>
       </a>
-      <div class="menu-icon" id="open-menu">
-        <!-- Same menu icon from script.js -->
-        <img src="icons/menu.svg" alt="Menu icon">
-
+      <div class="menu-icon">
+        <img src="icons/menu.svg" alt="Menu icon" id="open-menu">
       </div>
     </div>
     <div class="hero">
@@ -40,11 +38,11 @@
         <h2>GET IN TOUCH</h2>
         <div class="info-line">
             <img src="icons/mail.svg" alt="Email icon">
-            <p>info@jakubchmielar.com</p>
+            <p>chmelar.projects@gmail.com</p>
         </div>
         <div class="info-line">
             <img src="icons/phone.svg" alt="Phone icon">
-            <p>+420 123 456 789</p>
+            <p>+420 731 950 063</p>
         </div>
         <div class="info-line">
             <img src="icons/location.svg" alt="Location icon">
@@ -81,22 +79,6 @@
     <a href="#top" class="top underline-animation">GO BACK TO TOP</a>
   </footer>
 
-  <!-- Menu Overlay -->
-  <div class="menu-overlay" id="menu-overlay" style="display: none;">
-    <div class="menu-content">
-      <a href="index.html">Home</a>
-      <a href="more-work.html">More Work</a>
-      <a href="contact.html">Contact</a>
-      <a href="#" id="close-menu" class="close-menu-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M18 6L6 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
-    </div>
-  </div>
-
-  <!-- External Scripts (same menu script as main) -->
   <script src="script.js"></script>
   <script>
     // Local time: format => LOCAL/ HH:MM:SS
@@ -110,5 +92,17 @@
 
 
   </script>
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menu-overlay">
+      <div class="menu-content">
+          <a href="index.html">HOME</a>
+          <a href="more-work.html">MORE WORK</a>
+          <a href="about.html">ABOUT ME</a>
+          <a href="contact.html">CONTACT</a>         
+      </div>
+      <a href="#" id="close-menu" class="close-menu-icon">
+          <img src="icons/close-icon.svg" alt="Close menu" width="24" height="24">
+      </a>
+  </div>
 </body>
 </html>
