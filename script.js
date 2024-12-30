@@ -26,11 +26,13 @@ document.addEventListener('DOMContentLoaded', () => {
         menuIcon.addEventListener('click', () => {
             console.log('Menu icon clicked');
             menuOverlay.style.display = 'flex';
+            document.body.style.overflowY = 'hidden'; // Disable vertical scroll
         });
 
         closeMenu.addEventListener('click', (e) => {
             e.preventDefault();
             menuOverlay.style.display = 'none';
+            document.body.style.overflowY = 'auto'; // Re-enable vertical scroll
         });
     }
 
