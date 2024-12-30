@@ -8,6 +8,7 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@100;200;300;400;500;600;700;800&family=Inter+Tight:wght@400;500;550;600;700&display=swap" rel="stylesheet"/>
   <!-- CSS Files -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="contact.css" />
 </head>
@@ -29,14 +30,19 @@
 
 
     <div class="hero">
-      <h1>HAVE A PROJECT?<br><span class="highlight">LET'S MAKE IT <span class="opacity-70">HAPPEN</span></span></h1>
+      <h1>
+        <span class="slide-from-left">HAVE A PROJECT?</span><br>
+        <span class="highlight">
+          <span class="slide-from-right">LET'S MAKE IT <span class="opacity-70">HAPPEN</span></span>
+        </span>
+      </h1>
     </div>
   </header>
 
   <!-- Contact Form Section -->
-  <section class="contact-section">
+  <section class="contact-section" >
     <!-- Left side with contact info -->
-    <div class="contact-info">
+    <div class="contact-info" >
         <h2>GET IN TOUCH</h2>
         <div class="info-line">
             <img src="icons/mail.svg" alt="Email icon">
@@ -53,7 +59,7 @@
     </div>
 
     <!-- Right side with contact form -->
-    <div class="contact-container">
+    <div class="contact-container" data-aos="fade-down" data-aos-duration="1000">
 
       <form action="https://formsubmit.co/chmelar.projects@gmail.com" method="POST" class="contact-form" />
         <h3>Send Message</h3>
@@ -82,6 +88,10 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+      AOS.init();
+  </script>
   <script>
     // Local time: format => LOCAL/ HH:MM:SS
     function updateCzechTime() {
@@ -96,6 +106,9 @@
 
 
   </script>
+  
+
+
     <!-- Menu Overlay -->
     <div class="menu-overlay" id="menu-overlay">
       <div class="menu-content">
