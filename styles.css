@@ -331,6 +331,17 @@ body {
     display: block;
 }
 
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+}
+
+.card-link:hover {
+    text-decoration: none;
+}
+
 .work-description {
     background-color: #202020;
     height: 80px;

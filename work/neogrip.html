@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jakub Chmelar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/GLTFLoader.js"></script>
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="neogrip.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="top-bar" data-aos="fade-down" data-aos-duration="500">
+      <a href="../index.html" class="underline-animation">GO BACK HOME</a>
+      <a class="logo" href="../index.html">
+        <span>
+          <span class="logo-text">JCH</span><span class="logo-tm">™</span>
+        </span>
+      </a>
+      <div class="menu-icon">
+        <img src="../icons/menu.svg" alt="Menu icon" id="open-menu">
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <h1 class="title-center" data-aos="fade-up" data-aos-duration="500">NEOGRIP</h1>
+
+    <!-- Flex container for model + info -->
+    <div class="layout-container">
+      <!-- Main container on the left half -->
+      <div class="main-container">
+        <div class="model-wrapper">
+          <div class="loading-spinner" id="loading-spinner"></div>
+          <canvas id="three-canvas"></canvas>
+          <div class="model-overlay" id="model-overlay">
+            <img src="../icons/drag.svg" alt="Drag icon" class="drag-icon">
+            <p>Hold And Drag</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Info on the right half -->
+      <div class="info" data-aos="fade-up" data-aos-duration="500">
+        <div class="info-line">
+          <p>YEAR</p>
+          <p>2024</p>
+        </div>
+        <div class="info-line">
+          <p>CATEGORY</p>
+          <p>HW + SW</p>
+        </div>
+        <div class="info-line">
+          <p>STATUS</p>
+          <p class="status-in-progress">IN PROGRESS</p>
+        </div>
+        <div class="info-line">
+          <p>GITHUB</p>
+          <a href="https://github.com/AthemiS13" class="underline-animation">NEOGRIP</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" data-aos="fade-up" data-aos-anchor-placement="center-up" data-aos-duration="500">
+    <p>BUILT AND DESIGNED<br>BY JAKUB CHMIELAR</p>
+    <div class="footer-links">
+      <a href="https://github.com/AthemiS13" class="underline-animation">GITHUB ↗</a>
+      <a href="https://discordapp.com/users/583993378790834188" class="underline-animation">DISCORD ↗</a>
+    </div>
+    <a href="#top" class="top underline-animation">GO BACK TO TOP</a>
+  </footer>
+
+  <!-- External Script -->
+  <script src="../script.js"></script>
+  <script src="models\models.js"></script>
+
+  <!-- Three.js Setup -->
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- Menu Overlay -->
+  <div class="menu-overlay" id="menu-overlay">
+    <div class="menu-content">
+      <a href="../index.html">HOME</a>
+      <a href="../more-work.html">MORE WORK</a>
+      <a href="../about.html">ABOUT ME</a>
+      <a href="../contact.html">CONTACT</a>
+    </div>
+    <a href="#" id="close-menu" class="close-menu-icon">
+      <img src="../icons/close-icon.svg" alt="Close menu" width="24" height="24">
+    </a>
+  </div>
+</body>
+</html>

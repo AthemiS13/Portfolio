@@ -197,7 +197,10 @@ h3 {
     position: relative;
     z-index: 2;
     background-color: #000;
-    margin-bottom: 0;
+    padding: 0;
+    margin: 0;
+    padding-top: 3rem;
+
 }
 
 /* Hero Animation */

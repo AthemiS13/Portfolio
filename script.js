@@ -1,14 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log("script.js is connected!");
 
-    // Only add contact button listener if element exists
-    const contactBtn = document.querySelector('.contact-btn');
-    if (contactBtn) {
-        contactBtn.addEventListener('click', () => {
-            window.location.href = 'contact.html';
-        });
-    }
-
     // Smooth scrolling for 'Go Back to Top'
     document.querySelectorAll('a[href="#top"]').forEach(link => {
         link.addEventListener('click', (e) => {
