@@ -37,7 +37,7 @@
     <h1 class="title-center" data-aos="fade-up" data-aos-duration="500">NEOGRIP</h1>
 
     <!-- Flex container for model + info -->
-    <div class="layout-container">
+    <div class="layout-container" data-aos="zoom-in" data-aos-duration="500">
       <!-- Main container on the left half -->
       <div class="main-container">
         <div class="model-wrapper">
@@ -73,34 +73,34 @@
   </main>
 
   <section class="chessboard">
-    <div class="text-container">
+    <div class="text-container" data-aos="fade-right">
       <h3>DESCRIPTION</h3>
       <p>NeoGrip is a 3D-printed VR controller designed to bring functionality and precision to devices missing their original controllers. Built with user adaptability in mind, NeoGrip transforms simple inputs into VR-ready actions, ensuring a seamless gaming or productivity experience.</p>
     </div>
-    <div class="image-container">
+    <div class="image-container" data-aos="fade-right">
       <img src="../images/v2side-2.png" alt="Neogrip" class="image">
     </div>
 
-    <div class="image-container">
+    <div class="image-container" data-aos="fade-left">
       <img src="../images/v2back.png" alt="Neogrip" class="image">
     </div>
-    <div class="text-container">
+    <div class="text-container" data-aos="fade-left">
       <h3>MOTIVATION</h3>
       <p>Quest 2 headsets without controllers are often significantly cheaper but practically unusable due to setup barriers and lack of interaction devices. This project provides an affordable, open-source solution for people in this situation, turning these undervalued headsets into functional VR systems.</p>
     </div>
 
-    <div class="text-container">
+    <div class="text-container" data-aos="fade-right">
       <h3>PRINCIPLE</h3>
       <p>NeoGrip operates by leveraging Wi-Fi connectivity to communicate with SteamVR through the ALVR API. It sends requests to the ALVR server on port 8082, transmitting OpenXR input data for seamless interaction. By translating physical inputs into precise digital signals, NeoGrip ensures compatibility with VR environments, offering an intuitive user experience tailored to SteamVR.</p>
     </div>
-    <div class="image-container">
+    <div class="image-container" data-aos="fade-right">
       <img src="../images/diagram.png" alt="Neogrip" class="image">
     </div>
 
-    <div class="image-container">
+    <div class="image-container" data-aos="fade-left">
       <img src="../images/assembly.png" alt="Neogrip" class="image">
     </div>
-    <div class="text-container">
+    <div class="text-container" data-aos="fade-left">
       <h3>ASSEMBLY</h3>
       <p>NeoGrip uses an ESP32 to wirelessly connect to SteamVR, translating inputs from three tactile push buttons and binary controls for trigger, grab, and joystick actions. It features a built-in charging module and is powered by a rechargeable LiPo battery. Designed for reliability and precision, NeoGrip ensures seamless interaction with SteamVR through Wi-Fi connectivity.</p>
     </div>

@@ -212,30 +212,22 @@ main {
   margin: 5rem;
   padding-bottom: 5rem;
 }
+
+
 /* Base style for all image containers */
 .image-container {
   display: flex;
-  align-items: center;
+  align-items: center;     /* Vertical center */
+  justify-content: center; /* Horizontal center */
   height: 440px;
-}
-
-/* Even numbered images (2nd, 4th, etc) align left */
-.chessboard > .image-container:nth-of-type(even) {
-  justify-content: flex-start;
-  padding-left: 7rem;
-}
-
-/* Odd numbered images (1st, 3rd, etc) align right */
-.chessboard > .image-container:nth-of-type(odd) {
-  justify-content: flex-end;
-  padding-right: 15rem;
+  margin: auto;           /* Additional centering */
 }
 
 .text-container {
   display: flex;
   flex-direction: column;
   max-width: 80%;  /* Limit text width */
-  height: 400px;  /* Fixed height to match images */
+  height: 100%;  /* Fixed height to match images */
   justify-content: flex-start;
   padding-top: 2rem;  /* Match image container padding */
 }
@@ -256,9 +248,8 @@ main {
 }
 
 .image-container img {
-  height: 110%;  /* Make image 10% larger */
+  height: 110%;
   width: auto;
-  object-fit: cover;
-
+  object-fit: contain;    /* Ensure image fits and maintains aspect ratio */
   border-radius: 10px;
-  }
+}
