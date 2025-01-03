@@ -28,28 +28,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Availability status functionality
-    function updateAvailabilityStatus() {
-        const availableStatus = document.getElementById('status-available');
-        const unavailableStatus = document.getElementById('status-unavailable');
-        const currentHour = new Date().getHours();
+    // Only run availability code on pages that have the elements
+    if (document.getElementById('status-available') && document.getElementById('status-unavailable')) {
+        function updateAvailabilityStatus() {
+            const availableStatus = document.getElementById('status-available');
+            const unavailableStatus = document.getElementById('status-unavailable');
+            const currentHour = new Date().getHours();
 
-        // Hide both initially
-        availableStatus.style.visibility = 'hidden';
-        unavailableStatus.style.visibility = 'hidden';
+            // Hide both initially
+            availableStatus.style.visibility = 'hidden';
+            unavailableStatus.style.visibility = 'hidden';
 
-        // Wait for 500ms before showing status
-        setTimeout(() => {
-            if (currentHour >= 8 && currentHour < 23) {
-                availableStatus.style.visibility = 'visible';
-                availableStatus.classList.add('status-visible');
-            } else {
-                unavailableStatus.style.visibility = 'visible';
-                unavailableStatus.classList.add('status-visible');
-            }
-        }, 500);
+            // Wait for 500ms before showing status
+            setTimeout(() => {
+                if (currentHour >= 8 && currentHour < 23) {
+                    availableStatus.style.visibility = 'visible';
+                    availableStatus.classList.add('status-visible');
+                } else {
+                    unavailableStatus.style.visibility = 'visible';
+                    unavailableStatus.classList.add('status-visible');
+                }
+            }, 500);
+        }
+
+        // Update availability status on page load
+        updateAvailabilityStatus();
     }
-
-    // Update availability status on page load
-    updateAvailabilityStatus();
 });
